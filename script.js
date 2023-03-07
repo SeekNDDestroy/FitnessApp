@@ -40,6 +40,15 @@ let greeting = timeNow >= 5 && timeNow < 12 ? "Good Morning" : timeNow >= 12 && 
 
 
 
+const tabButtons = document.querySelectorAll('.btm-nav button');
 
+tabButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    tabButtons.forEach(button => {
+      button.classList.remove('active');
+    });
+    button.classList.add('active');
+  });
+});
 
 
